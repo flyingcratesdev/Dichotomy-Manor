@@ -7,7 +7,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public Sprite visualItem;
-    public string name;
+    public string nameItem;
     void Start()
     {
         
