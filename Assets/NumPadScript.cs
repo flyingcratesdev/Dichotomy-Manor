@@ -118,8 +118,8 @@ public class NumPadScript : MonoBehaviour
     {
         if (i < maxArraySize)
         {
-        enteredNums[i] = "4";
-        NumButtonPress();
+            enteredNums[i] = "4";
+            NumButtonPress();
         }
     }
     public void CincoPress()
