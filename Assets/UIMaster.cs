@@ -16,7 +16,7 @@ public class UIMaster : MonoBehaviour
         
     }
 
-    public void Exit()
+    public void ExitGameEntirely()
     {
         Application.Quit();
     }

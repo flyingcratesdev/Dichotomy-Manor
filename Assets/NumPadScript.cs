@@ -17,14 +17,12 @@ public class NumPadScript : MonoBehaviour
     //Array index
     public int i;
     //Maximum size of array of player input
-    //CHANGE IT TO WHATEVER
     public int maxArraySize = 4;
     //Same as Array but condensed into one string for text purposes
     public string playerNumOrder;
     //The correct numbers that solve the puzzle
-    //PLEASE CHANGE THIS IS A PLACEHOLDER
     public string correctNumOrder;
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +33,6 @@ public class NumPadScript : MonoBehaviour
     }
 
     //Called after any number button is pressed
-
     public void NumButtonPress()
     {
         //Debug.Log ("Button Confirm!");
@@ -84,6 +81,12 @@ public class NumPadScript : MonoBehaviour
         {
             resultText.text = "INCORRECT";
         }
+    }
+
+    public void ExitNumPad()
+    {
+        //hides numpad ui when exit is pressed
+        gameObject.SetActive(false);
     }
 
     //numbers to input, self explanitory
