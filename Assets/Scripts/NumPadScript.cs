@@ -17,30 +17,22 @@ public class NumPadScript : MonoBehaviour
     //Array index
     public int i;
     //Maximum size of array of player input
-    //CHANGE IT TO WHATEVER
     public int maxArraySize = 4;
     //Same as Array but condensed into one string for text purposes
     public string playerNumOrder;
     //The correct numbers that solve the puzzle
-    //PLEASE CHANGE THIS IS A PLACEHOLDER
-    public string correctNumOrder = "2024";
-
+    public string correctNumOrder;
+ 
     // Start is called before the first frame update
     void Start()
     {
         enteredNums = new string[4];
         i = 0;
+
+        correctNumOrder = "2024";
     }
 
     //Called after any number button is pressed
-
-    //ERROR APPEARS IF THE PLAYER PRESSES MORE BUTTONS THAN ALLOWED IN ARRAY
-    
-    //INCONSEQUENTIAL AS IT DOES NOTHING TO THE CODE AND EVERYTHING WORKS FINE / MAYBE TANKS PERFORMANCE IF DONE TOO MUCH 
-
-    //BUT IF YOU CAN FIX IT PLEASE DO ITS ANNOYING
-
-
     public void NumButtonPress()
     {
         //Debug.Log ("Button Confirm!");
@@ -91,59 +83,95 @@ public class NumPadScript : MonoBehaviour
         }
     }
 
+    public void ExitNumPad()
+    {
+        //hides numpad ui when exit is pressed
+        gameObject.SetActive(false);
+    }
+
     //numbers to input, self explanitory
     //written as to not be confused with other numeric details
     //learn your spanish :)
 
     public void UnoPress()
-    {
-        enteredNums[i] = "1";
-        NumButtonPress();
+    {   
+        if(i < maxArraySize)
+        {
+            enteredNums[i] = "1";
+            NumButtonPress();   
+        }
     }
     public void DosPress()
     {
-        enteredNums[i] = "2";
-        NumButtonPress();
+        if(i < maxArraySize)
+        {
+            enteredNums[i] = "2";
+            NumButtonPress();
+        }
     }
     public void TresPress()
     {
-        enteredNums[i] = "3";
-        NumButtonPress();
+        if(i < maxArraySize)
+        {
+            enteredNums[i] = "3";
+            NumButtonPress();
+        }
     }
  public void QuatroPress()
     {
-        enteredNums[i] = "4";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "4";
+            NumButtonPress();
+        }
     }
     public void CincoPress()
     {
-        enteredNums[i] = "5";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "5";
+            NumButtonPress();
+        }
     }
     public void SeisPress()
     {
-        enteredNums[i] = "6";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "6";
+            NumButtonPress();
+        }
     }
      public void SietePress()
     {
-        enteredNums[i] = "7";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "7";
+            NumButtonPress();
+        }
     }
     public void OchoPress()
     {
-        enteredNums[i] = "8";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "8";
+            NumButtonPress();
+        }
     }
     public void NuevePress()
     {
-        enteredNums[i] = "9";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "9";
+            NumButtonPress();
+        }
     }
     public void CeroPress()
     {
-        enteredNums[i] = "0";
-        NumButtonPress();
+        if (i < maxArraySize)
+        {
+            enteredNums[i] = "0";
+            NumButtonPress();
+        }
     }
 
 }
