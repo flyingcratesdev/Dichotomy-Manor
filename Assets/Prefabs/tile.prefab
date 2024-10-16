@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2079011069090780688}
   - component: {fileID: 3841451647639744890}
   - component: {fileID: 2623494046634003022}
-  - component: {fileID: -3348394073412235325}
+  - component: {fileID: -4043714844085110432}
   m_Layer: 0
   m_Name: tile
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3348394073412235325
+--- !u!114 &-4043714844085110432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,9 +115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6159436807191764907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7929d3fb830d5e4ab8f301e6cdc5a0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eb42d2f92bded7498b5ba357c5e1b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctColor: {r: 0, g: 1, b: 0, a: 1}
-  wrongColor: {r: 1, g: 0, b: 0, a: 1}
-  playerStartPosition: {fileID: 0}
+  render: {fileID: 3841451647639744890}
+  red: {fileID: 2100000, guid: 894fb9dd0d99ef348b1c9510bb7c4a97, type: 2}
+  green: {fileID: 2100000, guid: 32140bdcedcee404083b2523a1a64096, type: 2}
+  grey: {fileID: 3725833126623098283, guid: 40849fa5b153f2149a72f8d60e035933, type: 3}
+  isTriggered: 0
+  isCorrect: 0
