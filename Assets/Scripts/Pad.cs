@@ -21,12 +21,13 @@ public class Pad : MonoBehaviour
         {
             if(isCorrect)
             {
+
                 render.material = green;
 
             }else
             {
                 render.material = red;
-                other.GetComponentInParent<FPSController>().SetLocation(new Vector3(0, 1, 0));
+               other.GetComponentInParent<FPSController>().SetLocation(new Vector3(-45, 1.5f, 32));
 
 
             }

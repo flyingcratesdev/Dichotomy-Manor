@@ -31,12 +31,12 @@ public class FPSController : MonoBehaviour
     }
     public void SetLocation( Vector3 pos)
     {
+        print("Test");
         transform.position = pos;
 
     }
     void Update()
     {
-
         #region Handles Movment
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);

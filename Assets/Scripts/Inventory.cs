@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
 
     public LayerMask layerMask;
+    public LayerMask gunMask;
     public List<int> listInventory;
     public List<Item> listItems;
     public List<Image> slotsImages;
@@ -74,7 +75,25 @@ public class Inventory : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (itemInHand != null)
+        {
+            if (itemInHand.nameItem.Equals("gun") && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                RaycastHit hit;
+                // PickUp Item
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
+                {
+                    if (hit.collider.GetComponent<TargetDummy>())
+                    {
+                        hit.collider.GetComponent<TargetDummy>().HitTarget();
+
+                    }
+
+                }
+
+            }
+        }
+            if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit hit;
             // PickUp Item

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class ClockManager : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class ClockManager : MonoBehaviour
     void Start()
     {
         clockText.text = "" + smallHand + " + " + bigHand + " = " + "19";
-
+        
 
     }
 
