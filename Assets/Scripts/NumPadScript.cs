@@ -26,10 +26,17 @@ public class NumPadScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.SetActive(false);
+
         enteredNums = new string[4];
         i = 0;
 
         correctNumOrder = "2024";
+    }
+
+    public void TriggerPress()
+    {
+        gameObject.SetActive(true);
     }
 
     //Called after any number button is pressed
