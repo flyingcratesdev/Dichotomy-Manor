@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Book
   m_EditorClassIdentifier: 
   visualItem: {fileID: 21300000, guid: 1f3b43fd739751e42b8c294c3ccffe2a, type: 3}
-  nameItem: key
+  nameItem: Book
+  isBook: 1
+  bookText:
+  - this is a wonderful story his will the hi hello jank
+  - The story contninues mass lore
+  - clue for this
+  - you should do this on the second page this is weird
+  - new stuff
+  - blah blah
