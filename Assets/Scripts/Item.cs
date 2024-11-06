@@ -8,6 +8,8 @@ public class Item : ScriptableObject
 {
     public Sprite visualItem;
     public string nameItem;
+    public bool isBook;
+    public string[] bookText;
     void Start()
     {
         

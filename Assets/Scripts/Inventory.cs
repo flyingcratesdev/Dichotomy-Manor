@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +18,11 @@ public class Inventory : MonoBehaviour
     public int selectorID;
     public Transform hand;
     public Item itemInHand;
-
+    public GameObject bookUI;
+    public TMP_Text bookText;
+    public TMP_Text bookTextTwo;
+    public FPSController controllerScript;
+    int bookIndex = 0;
     private void Start()
     {
        SetSelector(0);
@@ -25,6 +31,11 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
+            controllerScript.canMove = true;
+
+            bookUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             listInventory[selectorID] = 0;
             listItems[selectorID] = null;
             slotsImages[selectorID].sprite = null;
@@ -172,7 +183,70 @@ public class Inventory : MonoBehaviour
             }
 
         }
+        if (itemInHand != null)
+        {
+            if (itemInHand.isBook)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                bookIndex = 0;
+                bookText.text = itemInHand.bookText[0];
+                bookTextTwo.text = itemInHand.bookText[bookIndex + 1];
 
+                bookUI.SetActive(true);
+                controllerScript.canMove = false;
+
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                bookUI.SetActive(false);
+            controllerScript.canMove = true;
+
+
+            }
+        }
+        else
+        {
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            bookUI.SetActive(false);
+            controllerScript.canMove = true;
+
+
+
+        }
+
+
+
+    }
+
+
+    public void NextPage()
+    {
+        if(bookIndex < itemInHand.bookText.Length-2)
+        {
+            bookIndex += 2;
+           bookText.text = itemInHand.bookText[bookIndex];
+            bookTextTwo.text = itemInHand.bookText[bookIndex + 1];
+
+
+        }
+
+    }
+
+    public void PrevPage()
+    {
+        if (bookIndex > 0)
+        {
+            bookIndex -= 2;
+            bookText.text = itemInHand.bookText[bookIndex];
+            bookTextTwo.text = itemInHand.bookText[bookIndex + 1];
+
+
+        }
 
 
     }
