@@ -1291,6 +1291,8 @@ GameObject:
   - component: {fileID: 441432869}
   - component: {fileID: 441432868}
   - component: {fileID: 441432867}
+  - component: {fileID: 441432872}
+  - component: {fileID: 441432871}
   m_Layer: 0
   m_Name: BluePuzzleCube
   m_TagString: Untagged
@@ -1384,6 +1386,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441432871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441432866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9e19409b0c9894e9ccf347f9d93dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curItem: {fileID: 11400000, guid: 239ad1d447a0a064a81daff44793e811, type: 2}
+--- !u!54 &441432872
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441432866}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &458288081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6566068203355693772, guid: 9fbe1be0448eb1e46af21ef675435e3a, type: 3}
@@ -1948,7 +1990,7 @@ Transform:
   m_GameObject: {fileID: 659442299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.245, z: 0.58399963}
+  m_LocalPosition: {x: -3.8535, y: -1.9353, z: 1.784}
   m_LocalScale: {x: 0.2045, y: 0.12753439, z: 0.2045}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3088,7 +3130,7 @@ Transform:
   m_GameObject: {fileID: 935973074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2939, z: 0.584}
+  m_LocalPosition: {x: -3.8535001, y: -1.8863999, z: 1.7840003}
   m_LocalScale: {x: 0.2045, y: 0.050818253, z: 0.2045}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4345,6 +4387,8 @@ GameObject:
   - component: {fileID: 1342311519}
   - component: {fileID: 1342311518}
   - component: {fileID: 1342311517}
+  - component: {fileID: 1342311522}
+  - component: {fileID: 1342311521}
   m_Layer: 0
   m_Name: RedPuzzleCube
   m_TagString: Untagged
@@ -4438,6 +4482,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342311521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342311516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9e19409b0c9894e9ccf347f9d93dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curItem: {fileID: 11400000, guid: eaa5e2e371e7b1e4a9d76163afbefe08, type: 2}
+--- !u!54 &1342311522
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342311516}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1348515804
 PrefabInstance:
   m_ObjectHideFlags: 0
