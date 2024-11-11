@@ -128,7 +128,8 @@ public class Inventory : MonoBehaviour
                             hit.collider.GetComponent<Rigidbody>().isKinematic = true;
 
                             hit.collider.gameObject.layer = 0;
-                            hit.collider.gameObject.transform.localPosition = Vector3.zero;
+                            hit.collider.gameObject.transform.localPosition = hit.collider.GetComponent<ItemHolder>().curItem.localPosition;
+                            hit.collider.gameObject.transform.localEulerAngles = hit.collider.GetComponent<ItemHolder>().curItem.localRotation;
                             SetSelector(selectorID);
                             return;
 

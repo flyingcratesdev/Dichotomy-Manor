@@ -16,3 +16,5 @@ MonoBehaviour:
   nameItem: MorseCard
   isBook: 0
   bookText: []
+  localPosition: {x: -0.5, y: 0, z: 0}
+  localRotation: {x: 0, y: 0, z: 180}

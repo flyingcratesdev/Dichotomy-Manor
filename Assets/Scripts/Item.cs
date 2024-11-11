@@ -10,6 +10,8 @@ public class Item : ScriptableObject
     public string nameItem;
     public bool isBook;
     public string[] bookText;
+    public Vector3 localPosition;
+    public Vector3 localRotation;
     void Start()
     {
         
