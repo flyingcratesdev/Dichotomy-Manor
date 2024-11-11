@@ -14,7 +14,9 @@ public class Safe : MonoBehaviour
     public GameObject SafeDoor;
     public TMP_InputField field;
     bool isDisabled = false;
-    
+    public string Answer = "7126";
+
+
     void Start()
     {
         
@@ -45,7 +47,7 @@ public class Safe : MonoBehaviour
 
             }
         }
-        if(field.text == "7126" && Input.GetKeyDown(KeyCode.Return))
+        if(field.text == Answer && Input.GetKeyDown(KeyCode.Return))
         {
 
             field.text = "";
