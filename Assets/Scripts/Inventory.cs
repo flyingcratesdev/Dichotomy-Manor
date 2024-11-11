@@ -90,6 +90,7 @@ public class Inventory : MonoBehaviour
         {
             if (itemInHand.nameItem.Equals("gun") && Input.GetKeyDown(KeyCode.Mouse0))
             {
+                print("using gun");
                 RaycastHit hit;
                 // PickUp Item
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
