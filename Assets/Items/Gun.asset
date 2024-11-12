@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
   m_Name: Gun
   m_EditorClassIdentifier: 
-  visualItem: {fileID: 21300000, guid: 1f3b43fd739751e42b8c294c3ccffe2a, type: 3}
+  visualItem: {fileID: 21300000, guid: c2faa55f12311894bb54c91e1b62d34a, type: 3}
   nameItem: gun
+  isBook: 0
+  bookText: []
+  localPosition: {x: 0, y: 0, z: 0}
+  localRotation: {x: 0, y: 0, z: 0}
