@@ -16,5 +16,5 @@ MonoBehaviour:
   nameItem: gun
   isBook: 0
   bookText: []
-  localPosition: {x: 0, y: 0, z: 0}
+  localPosition: {x: 0.57, y: -0.12, z: -0.06}
   localRotation: {x: 0, y: 0, z: 0}

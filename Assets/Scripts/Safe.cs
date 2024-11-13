@@ -47,25 +47,28 @@ public class Safe : MonoBehaviour
 
             }
         }
-        if(field.text == Answer && Input.GetKeyDown(KeyCode.Return))
+        if (isTriggered)
         {
+            if (field.text == Answer && Input.GetKeyDown(KeyCode.Return))
+            {
 
-            field.text = "";
-            SafeDoor.SetActive(false);
-            Controller.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            InputField.SetActive(false);
-            isDisabled = true;
-            isTriggered = false;
+                field.text = "";
+                SafeDoor.SetActive(false);
+                Controller.enabled = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                InputField.SetActive(false);
+                isDisabled = true;
+                isTriggered = false;
 
-        }
-        else if(Input.GetKeyDown(KeyCode.Return))
-        {
+            }
+            else if (Input.GetKeyDown(KeyCode.Return))
+            {
 
-            field.text = "";
+                field.text = "";
 
 
+            }
         }
     }
 
