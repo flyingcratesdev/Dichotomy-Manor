@@ -16058,7 +16058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35db1fa1751ae498526847ecbc8a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: RoomSelvin 1
+  SceneName: PaintingRoom
 --- !u!65 &1459640206
 BoxCollider:
   m_ObjectHideFlags: 0
