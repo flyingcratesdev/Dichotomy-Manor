@@ -11,9 +11,10 @@ public class ThirdPersonMovement : MonoBehaviour
     private float turnSmoothVelocity;
 
     public float speed = 6f;
-    public float slipperyFactor = 0.95f; // Adjust for more or less sliding (0.9-0.99 for noticeable sliding)
+    public float slipperyFactor = 0.98f; // Adjust for how slippery you want it (0.9 - 0.99)
     private Vector3 velocity;
     private bool isOnIce = false;
+    private bool isSliding = false;
 
     // Update is called once per frame
     void Update()
@@ -37,21 +38,22 @@ public class ThirdPersonMovement : MonoBehaviour
             // Apply sliding effect if on ice
             if (isOnIce)
             {
-                // Reduce speed gradually to create a sliding effect
+                isSliding = true;
                 velocity = moveDir.normalized * speed * slipperyFactor + velocity * slipperyFactor;
             }
             else
             {
                 // Normal movement without sliding
                 velocity = moveDir.normalized * speed;
+                isSliding = false; // Disable sliding when not on ice
             }
 
             // Move the character
             controller.Move(velocity * Time.deltaTime);
         }
-        else if (isOnIce)
+        else if (isSliding)
         {
-            // If no input and on ice, continue sliding
+            // Continue sliding until we hit an object
             velocity *= slipperyFactor;
             controller.Move(velocity * Time.deltaTime);
         }
@@ -72,6 +74,16 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 isOnIce = false;
             }
+        }
+    }
+
+    // Stop sliding when colliding with an object (other than ice)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (!hit.collider.CompareTag("Ice"))
+        {
+            isSliding = false;
+            velocity = Vector3.zero; // Stop the sliding motion
         }
     }
 }
