@@ -12,7 +12,7 @@ public class ClockManager : MonoBehaviour
     public TMP_Text clockText;
     void Start()
     {
-        clockText.text = "" + smallHand + " + " + bigHand + " = " + "19";
+        clockText.text = "" + smallHand + " + " + bigHand + " = ";
         
 
     }
@@ -32,7 +32,7 @@ public class ClockManager : MonoBehaviour
 
         }
         sum = smallHand + bigHand;
-        clockText.text = "" + smallHand + " + " + bigHand + " = " + "19";
+        clockText.text = "" + smallHand + " + " + bigHand + " = ";
         if(sum == 19)
         {
 
@@ -55,7 +55,7 @@ public class ClockManager : MonoBehaviour
         }
         sum = smallHand + bigHand;
 
-        clockText.text = "" + smallHand + " + " + bigHand + " = " + "19";
+        clockText.text = "" + smallHand + " + " + bigHand + " = ";
         if (sum == 19)
         {
 
