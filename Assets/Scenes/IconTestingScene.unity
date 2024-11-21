@@ -122,6 +122,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &583411664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.891
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.084
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379604802060216121, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806802357813572577, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
+      propertyPath: m_Name
+      value: BluePuzzleCube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d736fef8061af784e9c2b85a27109bf9, type: 3}
 --- !u!1 &697892261
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +532,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &777220023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.908
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833242259877986041, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476970419849803367, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
+      propertyPath: m_Name
+      value: RedPuzzleCube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64314cb048a3b054086d2bcd0b8a4267, type: 3}
 --- !u!1 &882910586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2821425139807486212, guid: 8af3d9452127c7a4aa44e0d18b5ff6a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.014
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 2821425139807486212, guid: 8af3d9452127c7a4aa44e0d18b5ff6a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2248,7 +2362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b072b0b7a8e21414fb29efcf5aa6f7e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.982
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b072b0b7a8e21414fb29efcf5aa6f7e8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2303,3 +2417,5 @@ SceneRoots:
   - {fileID: 697892267}
   - {fileID: 1314590327}
   - {fileID: 1993084299}
+  - {fileID: 777220023}
+  - {fileID: 583411664}
