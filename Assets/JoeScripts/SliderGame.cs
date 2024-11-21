@@ -15,7 +15,8 @@ public class SliderGame : MonoBehaviour
     [SerializeField]
     private bool isMoving = false; // Control whether the object should move
 
-    
+    [SerializeField]
+    private Block[] blocks;
     void Start()
     {
         
@@ -35,8 +36,14 @@ public class SliderGame : MonoBehaviour
                 firstSelected.transform.position = targetPosition;
                 secondSelected = null;
                 firstSelected = null;
+               
                 isMoving = false; // Stop movement
             }
+        }
+        if (blocks[0].colorID == 1 && blocks[3].colorID == 1 && blocks[1].colorID == 2 && blocks[4].colorID == 2 && blocks[2].colorID == 3 && blocks[5].colorID == 3 && blocks[8].colorID == 3)
+        {
+            print("YOU WIN!");
+
         }
 
 
@@ -67,9 +74,9 @@ public class SliderGame : MonoBehaviour
                 {
                     MoveToPosition(secondSelected.transform.position);
                     // firstSelected.transform.position = secondSelected.transform.position;
-                    firstSelected.GetComponent<Block>().currentSpot.isOccupied = false;
+                    firstSelected.GetComponent<Block>().currentSpot.SetOccupation(0, false);
                     firstSelected.GetComponent<Block>().currentSpot = secondSelected.GetComponent<Block>();
-                    block.GetComponent<Block>().isOccupied = true;
+                    block.GetComponent<Block>().SetOccupation(firstSelected.GetComponent<Block>().colorID, true);
                     firstSelected.GetComponent<Block>().ShowFrame(false);
                     firstSelected.GetComponent<Block>().gridPosition = secondSelected.GetComponent<Block>().gridPosition;
                   

@@ -179,6 +179,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 2091970878}
   frame: {fileID: 1277392708}
+  colorID: 3
 --- !u!114 &173540661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +446,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!114 &231027435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +570,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!114 &354557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,6 +775,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 1898330966}
   frame: {fileID: 1328332653}
+  colorID: 3
 --- !u!114 &426577916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +900,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 2124594949}
   frame: {fileID: 1780063323}
+  colorID: 2
 --- !u!114 &542739048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1062,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!114 &610806999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1303,16 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0}
   moveSpeed: 9
   isMoving: 0
+  blocks:
+  - {fileID: 231027434}
+  - {fileID: 2091970878}
+  - {fileID: 2124594949}
+  - {fileID: 1542802982}
+  - {fileID: 1050605365}
+  - {fileID: 1587914296}
+  - {fileID: 610806998}
+  - {fileID: 1898330966}
+  - {fileID: 354557675}
 --- !u!1 &1050605361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1407,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!114 &1050605366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,6 +1811,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 1587914296}
   frame: {fileID: 1068544971}
+  colorID: 3
 --- !u!114 &1398152445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,6 +2002,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!1 &1554077407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2060,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 1542802982}
   frame: {fileID: 1950575400}
+  colorID: 2
 --- !u!114 &1554077410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2165,6 +2185,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 1050605365}
   frame: {fileID: 2105286532}
+  colorID: 1
 --- !u!114 &1581212099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2326,6 +2347,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!114 &1587914297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2479,6 +2501,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 231027434}
   frame: {fileID: 2032625126}
+  colorID: 1
 --- !u!1 &1780063323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,6 +2700,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!1 &1950575400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +2974,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!1 &2105286532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3173,7 @@ MonoBehaviour:
   isOccupied: 0
   currentSpot: {fileID: 0}
   frame: {fileID: 0}
+  colorID: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

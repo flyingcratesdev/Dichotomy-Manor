@@ -9,13 +9,17 @@ public class Block : MonoBehaviour
     public bool isOccupied = false;
     public Block currentSpot;
     public GameObject frame;
+    public int colorID = 0;
+    //0 - white 1 - blue 2 - red 3 - purple
+
+
 
     private void Start()
     {
         if (isBlock)
         {
             gridPosition = currentSpot.gridPosition;
-            currentSpot.isOccupied = true;
+            currentSpot.SetOccupation(colorID, true);
 
         }
     }
@@ -23,6 +27,15 @@ public class Block : MonoBehaviour
     {
 
         frame.SetActive(show);
+
+
+    }
+
+    public void SetOccupation(int numColor, bool occupy)
+    {
+        colorID = numColor;
+        isOccupied = occupy;
+
 
 
     }
