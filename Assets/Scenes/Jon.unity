@@ -359,9 +359,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 240343427903100583, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1716128198480016077, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
       propertyPath: m_Name
       value: Book_4_Brown
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716128198480016077, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2061304122335750263, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -402,6 +410,14 @@ PrefabInstance:
     - target: {fileID: 2061304122335750263, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467805386821067546, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078015552552279447, guid: d2547cfac013c704a93c30c2d0cec95e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
