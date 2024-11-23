@@ -35,7 +35,7 @@ public class Safe : MonoBehaviour
                 InputField.SetActive(true);
 
             }
-            else if (isOnTrigger && Input.GetKeyDown(KeyCode.Escape) && isTriggered)
+            else if (isOnTrigger && Input.GetKeyDown(KeyCode.Tab) && isTriggered)
             {
 
                 Controller.enabled = true;

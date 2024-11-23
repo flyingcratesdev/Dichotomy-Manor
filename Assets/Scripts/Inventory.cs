@@ -23,9 +23,14 @@ public class Inventory : MonoBehaviour
     public TMP_Text bookTextTwo;
     public FPSController controllerScript;
     int bookIndex = 0;
+    public Animator anim;
+
+    bool isSwinging = false;
+
+
     private void Start()
     {
-       SetSelector(0);
+        SetSelector(0);
     }
     void Update()
     {
@@ -88,7 +93,44 @@ public class Inventory : MonoBehaviour
         }
         if (itemInHand != null)
         {
-            if (itemInHand.nameItem.Equals("gun") && Input.GetKeyDown(KeyCode.Mouse0))
+
+            if (itemInHand.nameItem.Equals("crowbar"))
+            {
+                if (!isSwinging)
+                {
+                    anim.Play("CrowBarIdle");
+
+                }
+                else
+                {
+                    anim.Play("CrowBarSwing");
+
+
+
+                }
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
+                {
+                    RaycastHit hit;
+                    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f, gunMask))
+                    {
+                     if(hit.collider.GetComponent<Crate>())
+                        {
+
+                            Destroy(hit.collider.gameObject);
+
+
+                        }
+
+                    }
+                    Invoke("ResetAnimation", 1f);
+                    isSwinging = true;
+
+                }
+
+
+
+            }
+            else if (itemInHand.nameItem.Equals("gun") && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 print("using gun");
                 RaycastHit hit;
@@ -103,9 +145,15 @@ public class Inventory : MonoBehaviour
 
                 }
 
+            }else
+            {
+
+                anim.Play("Default");
+
+
             }
         }
-            if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit hit;
             // PickUp Item
@@ -140,12 +188,12 @@ public class Inventory : MonoBehaviour
                 if (hit.collider.GetComponent<Trigger>())
                 {
 
-                    if(itemInHand.nameItem.Equals("key"))
+                    if (itemInHand.nameItem.Equals("key"))
                     {
 
                         print("OpenDoor");
 
-                    }else
+                    } else
                     {
 
                         print("Nothing happened");
@@ -162,7 +210,13 @@ public class Inventory : MonoBehaviour
 
         }
     }
+    void ResetAnimation()
+    {
 
+        isSwinging = false;
+
+
+    }
 
     void SetSelector(int slotID)
     {
