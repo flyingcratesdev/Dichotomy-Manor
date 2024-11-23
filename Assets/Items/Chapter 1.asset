@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
+  m_Name: Chapter 1
+  m_EditorClassIdentifier: 
+  visualItem: {fileID: 21300000, guid: 25ef4e3513fd7f4478fd01917ceefba4, type: 3}
+  nameItem: Book
+  isBook: 1
+  bookText:
+  - The world seems like a plaything. People come and go and work just to continue
+    playing. I think the earth might be quite simple, from what I've researched this
+    is my current conclusion. But research like this won't buy me a house, so I'm
+    going to have settle for my circus job. The gig is quite easy honestly, it's
+    basically show and then get paid.
+  - Doing this has earned me a spot in an apartment. While the outside is a bit cruel,
+    having a place to stay and store my things would be helpful. The main problem
+    with this appartment is that I never comfortable. I wake up on the bed with sweat
+    on one side of my body, not a great feeling frankly. Hopefully, at some point
+    I will find a house for myself. One that will suit my needs.
+  localPosition: {x: -1.131, y: -0.252, z: -0.015}
+  localRotation: {x: 84.19518, y: 81.446396, z: 266.17163}
