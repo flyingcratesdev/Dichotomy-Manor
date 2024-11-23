@@ -111,7 +111,7 @@ public class Inventory : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
                 {
                     RaycastHit hit;
-                    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f, gunMask))
+                    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5f, gunMask))
                     {
                      if(hit.collider.GetComponent<Crate>())
                         {
