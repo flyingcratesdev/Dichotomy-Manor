@@ -117,8 +117,6 @@ public class Inventory : MonoBehaviour
                         {
 
                             Destroy(hit.collider.gameObject);
-
-
                         }
 
                     }
@@ -145,7 +143,40 @@ public class Inventory : MonoBehaviour
 
                 }
 
-            }else
+            }else if(itemInHand.nameItem.Equals("redpuzzlecube") && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                RaycastHit hit;
+                // PickUp Item
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
+                {
+                    if (hit.collider.GetComponent<InsertRed>())
+                    {
+                        hit.collider.GetComponent<InsertRed>().InsertBlock();
+                        DestroyItem();
+
+                    }
+
+                }
+
+
+            }
+            else if (itemInHand.nameItem.Equals("bluepuzzlecube") && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                RaycastHit hit;
+                // PickUp Item
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
+                {
+                    if (hit.collider.GetComponent<InsertBlue>())
+                    {
+                        hit.collider.GetComponent<InsertBlue>().InsertBlock();
+                        DestroyItem();
+                    }
+
+                }
+
+
+            }
+            else
             {
 
                 anim.Play("Default");
@@ -217,7 +248,15 @@ public class Inventory : MonoBehaviour
 
 
     }
+    void DestroyItem()
+    {
+        listInventory[selectorID] = 0;
+        listItems[selectorID] = null;
+        slotsImages[selectorID].sprite = null;
+        Destroy(slotsGameObjects[selectorID].transform.gameObject);
+        SetSelector(selectorID);
 
+    }
     void SetSelector(int slotID)
     {
         selector.position = slotsImages[slotID].transform.position;
@@ -287,8 +326,6 @@ public class Inventory : MonoBehaviour
             bookIndex += 2;
            bookText.text = itemInHand.bookText[bookIndex];
             bookTextTwo.text = itemInHand.bookText[bookIndex + 1];
-
-
         }
 
     }

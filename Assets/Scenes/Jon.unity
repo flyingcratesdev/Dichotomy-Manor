@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9e19409b0c9894e9ccf347f9d93dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curItem: {fileID: 11400000, guid: b5eeb9997a8ea73489c0ba0f8ec96d89, type: 2}
+  curItem: {fileID: 11400000, guid: 7ceffe89e023463438ad5b3baee426cc, type: 2}
 --- !u!54 &1860531317
 Rigidbody:
   m_ObjectHideFlags: 0

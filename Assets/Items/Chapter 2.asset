@@ -16,15 +16,22 @@ MonoBehaviour:
   nameItem: Book
   isBook: 1
   bookText:
-  - The world seems like a plaything. People come and go and work just to continue
-    playing. I think the earth might be quite simple, from what I've researched this
-    is my current conclusion. But research like this won't buy me a house, so I'm
-    going to have settle for my circus job. The gig is quite easy honestly, it's
-    basically show and then get paid.
-  - Doing this has earned me a spot in an apartment. While the outside is a bit cruel,
-    having a place to stay and store my things would be helpful. The main problem
-    with this appartment is that I never comfortable. I wake up on the bed with sweat
-    on one side of my body, not a great feeling frankly. Hopefully, at some point
-    I will find a house for myself. One that will suit my needs.
+  - 'Good news. I moved out. Bad news. I''m back to sleeping outside. The appartment
+    was too much to deal with, so the cold outside currently suits my needs much
+    more. Thankfully, I learned about storage lockers and ended up putting all my
+    items in there for the meanwhile. I also learned that with money, you can get
+    anything in the world. '
+  - Though I am outside, I will be inside eventually, because I hired a bunch of
+    people to build me my own house, exactly how I wanted. The circus pays me "the
+    big bucks", as some people might say, for being the main attraction. I want to
+    know exactly why that's the case, but I won't worry too much. There are other
+    matters that are more important.
+  - The Puzzle Maker might be one of the greatest shows on TV, granted I haven't
+    watched much TV, but it is still one of the best. My plaything theory proves
+    everyday more and more to be true. I especially now see why people live to play.
+    The Puzzle Maker show has moved me and given me motivation to make my own puzzles.
+    Maybe I'll do one using a radio, a clock, maybe even cubes. No that last one
+    kind of seems stupid, I don't think I'll do that one.
+  - 
   localPosition: {x: -1.131, y: -0.252, z: -0.015}
   localRotation: {x: 84.19518, y: 81.446396, z: 266.17163}
