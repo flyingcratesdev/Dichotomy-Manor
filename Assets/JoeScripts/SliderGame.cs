@@ -17,6 +17,11 @@ public class SliderGame : MonoBehaviour
 
     [SerializeField]
     private Block[] blocks;
+
+    private bool hasWon = false;
+    public GameObject unsolved;
+    public GameObject solved;
+    public PlayerInteraction interactionScript;
     void Start()
     {
         
@@ -40,9 +45,14 @@ public class SliderGame : MonoBehaviour
                 isMoving = false; // Stop movement
             }
         }
-        if (blocks[0].colorID == 1 && blocks[3].colorID == 1 && blocks[1].colorID == 2 && blocks[4].colorID == 2 && blocks[2].colorID == 3 && blocks[5].colorID == 3 && blocks[8].colorID == 3)
+        if (!isMoving && blocks[0].colorID == 1 && blocks[3].colorID == 1 && blocks[1].colorID == 2 && blocks[4].colorID == 2 && blocks[2].colorID == 3 && blocks[5].colorID == 3 && blocks[8].colorID == 3 && !hasWon)
         {
+
+            unsolved.SetActive(false);
+            solved.SetActive(true);
+            interactionScript.CompleteSlidingPuzzle();
             print("YOU WIN!");
+            hasWon = true;
 
         }
 

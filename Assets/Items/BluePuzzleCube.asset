@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BluePuzzleCube
   m_EditorClassIdentifier: 
   visualItem: {fileID: 21300000, guid: 1f3b43fd739751e42b8c294c3ccffe2a, type: 3}
-  nameItem: redpuzzlecube
+  nameItem: bluepuzzlecube
   isBook: 0
   bookText: []
   localPosition: {x: 0, y: 0, z: 0}
