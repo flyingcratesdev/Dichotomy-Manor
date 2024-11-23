@@ -15707,11 +15707,15 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_Volume: 0.19
 =======
   m_Volume: 0.6
 >>>>>>> Stashed changes
+=======
+  m_Volume: 1
+>>>>>>> parent of 82f1249 (Volume)
   m_Pitch: 1
   Loop: 0
   Mute: 0
