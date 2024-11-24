@@ -143,7 +143,7 @@ public class Inventory : MonoBehaviour
 
                 }
 
-            }else if(itemInHand.nameItem.Equals("redpuzzlecube") && Input.GetKeyDown(KeyCode.Mouse0))
+            }else if(itemInHand.nameItem.Equals("redpuzzlecube") && Input.GetKey(KeyCode.Mouse0))
             {
                 RaycastHit hit;
                 // PickUp Item
@@ -160,12 +160,13 @@ public class Inventory : MonoBehaviour
 
 
             }
-            else if (itemInHand.nameItem.Equals("bluepuzzlecube") && Input.GetKeyDown(KeyCode.Mouse0))
+            else if (itemInHand.nameItem.Equals("bluepuzzlecube") && Input.GetKey(KeyCode.Mouse0))
             {
                 RaycastHit hit;
                 // PickUp Item
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
                 {
+                    print(hit.collider.gameObject);
                     if (hit.collider.GetComponent<InsertBlue>())
                     {
                         hit.collider.GetComponent<InsertBlue>().InsertBlock();

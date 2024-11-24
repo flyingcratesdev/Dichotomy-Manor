@@ -607,11 +607,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &144599005
 MeshRenderer:
@@ -1402,7 +1402,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &558562887
 MeshRenderer:
@@ -2355,7 +2355,7 @@ GameObject:
   - component: {fileID: 1363225483}
   - component: {fileID: 1363225482}
   - component: {fileID: 1363225481}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Solved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3144,7 +3144,7 @@ GameObject:
   - component: {fileID: 1973731581}
   - component: {fileID: 1973731580}
   - component: {fileID: 1973731579}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: VisualSlidingPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
