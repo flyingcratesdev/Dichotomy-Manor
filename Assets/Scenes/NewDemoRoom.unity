@@ -3116,7 +3116,7 @@ PrefabInstance:
       objectReference: {fileID: 654758862}
     - target: {fileID: 6898347787064354184, guid: 7788f2b6326e6ae40a2de4f5e8a4b603, type: 3}
       propertyPath: layerMask.m_Bits
-      value: 192
+      value: 193
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
