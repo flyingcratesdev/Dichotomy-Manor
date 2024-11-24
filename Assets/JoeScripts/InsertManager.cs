@@ -9,9 +9,9 @@ public class InsertManager : MonoBehaviour
 
     public GameObject uncompleted, completed;
 
-    public void SetBlock(bool isred)
+    public void SetBlock(bool isRed)
     {
-        if(isred)
+        if(isRed)
         {
 
             isRed = true;
@@ -22,14 +22,7 @@ public class InsertManager : MonoBehaviour
 
             isBlue = true;
         }
-        if (isRed && isBlue)
-        {
 
-            uncompleted.SetActive(false);
-            completed.SetActive(true);
-            
-
-        }
 
 
     }
@@ -37,4 +30,15 @@ public class InsertManager : MonoBehaviour
 
 
 
+    void Update()
+    {
+    if(isRed && isBlue)
+        {
+
+            uncompleted.SetActive(false);
+            completed.SetActive(true); 
+
+
+        }
+    }
 }
