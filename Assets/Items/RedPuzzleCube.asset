@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
   m_Name: RedPuzzleCube
   m_EditorClassIdentifier: 
-  visualItem: {fileID: 21300000, guid: 1f3b43fd739751e42b8c294c3ccffe2a, type: 3}
+  visualItem: {fileID: 21300000, guid: e010ed2d7748ece4590b709c29803cdd, type: 3}
   nameItem: redpuzzlecube
   isBook: 0
   bookText: []
