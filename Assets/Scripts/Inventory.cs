@@ -23,9 +23,14 @@ public class Inventory : MonoBehaviour
     public TMP_Text bookTextTwo;
     public FPSController controllerScript;
     int bookIndex = 0;
+    public Animator anim;
+
+    bool isSwinging = false;
+
+
     private void Start()
     {
-       SetSelector(0);
+        SetSelector(0);
     }
     void Update()
     {
@@ -88,7 +93,42 @@ public class Inventory : MonoBehaviour
         }
         if (itemInHand != null)
         {
-            if (itemInHand.nameItem.Equals("gun") && Input.GetKeyDown(KeyCode.Mouse0))
+
+            if (itemInHand.nameItem.Equals("crowbar"))
+            {
+                if (!isSwinging)
+                {
+                    anim.Play("CrowBarIdle");
+
+                }
+                else
+                {
+                    anim.Play("CrowBarSwing");
+
+
+
+                }
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
+                {
+                    RaycastHit hit;
+                    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5f, gunMask))
+                    {
+                     if(hit.collider.GetComponent<Crate>())
+                        {
+
+                            Destroy(hit.collider.gameObject);
+                        }
+
+                    }
+                    Invoke("ResetAnimation", 1f);
+                    isSwinging = true;
+
+                }
+
+
+
+            }
+            else if (itemInHand.nameItem.Equals("gun") && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 print("using gun");
                 RaycastHit hit;
@@ -103,9 +143,49 @@ public class Inventory : MonoBehaviour
 
                 }
 
+            }else if(itemInHand.nameItem.Equals("redpuzzlecube") && Input.GetKey(KeyCode.Mouse0))
+            {
+                RaycastHit hit;
+                // PickUp Item
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
+                {
+                    if (hit.collider.GetComponent<InsertRed>())
+                    {
+                        hit.collider.GetComponent<InsertRed>().InsertBlock();
+                        DestroyItem();
+
+                    }
+
+                }
+
+
+            }
+            else if (itemInHand.nameItem.Equals("bluepuzzlecube") && Input.GetKey(KeyCode.Mouse0))
+            {
+                RaycastHit hit;
+                // PickUp Item
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, gunMask))
+                {
+                    print(hit.collider.gameObject);
+                    if (hit.collider.GetComponent<InsertBlue>())
+                    {
+                        hit.collider.GetComponent<InsertBlue>().InsertBlock();
+                        DestroyItem();
+                    }
+
+                }
+
+
+            }
+            else
+            {
+
+                anim.Play("Default");
+
+
             }
         }
-            if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit hit;
             // PickUp Item
@@ -127,7 +207,7 @@ public class Inventory : MonoBehaviour
                             hit.collider.GetComponent<Rigidbody>().useGravity = false;
                             hit.collider.GetComponent<Rigidbody>().isKinematic = true;
 
-                            hit.collider.gameObject.layer = 0;
+                            hit.collider.gameObject.layer = 9;
                             hit.collider.gameObject.transform.localPosition = hit.collider.GetComponent<ItemHolder>().curItem.localPosition;
                             hit.collider.gameObject.transform.localEulerAngles = hit.collider.GetComponent<ItemHolder>().curItem.localRotation;
                             SetSelector(selectorID);
@@ -140,12 +220,12 @@ public class Inventory : MonoBehaviour
                 if (hit.collider.GetComponent<Trigger>())
                 {
 
-                    if(itemInHand.nameItem.Equals("key"))
+                    if (itemInHand.nameItem.Equals("key"))
                     {
 
                         print("OpenDoor");
 
-                    }else
+                    } else
                     {
 
                         print("Nothing happened");
@@ -162,8 +242,22 @@ public class Inventory : MonoBehaviour
 
         }
     }
+    void ResetAnimation()
+    {
+
+        isSwinging = false;
 
 
+    }
+    void DestroyItem()
+    {
+        listInventory[selectorID] = 0;
+        listItems[selectorID] = null;
+        slotsImages[selectorID].sprite = null;
+        Destroy(slotsGameObjects[selectorID].transform.gameObject);
+        SetSelector(selectorID);
+
+    }
     void SetSelector(int slotID)
     {
         selector.position = slotsImages[slotID].transform.position;
@@ -233,8 +327,6 @@ public class Inventory : MonoBehaviour
             bookIndex += 2;
            bookText.text = itemInHand.bookText[bookIndex];
             bookTextTwo.text = itemInHand.bookText[bookIndex + 1];
-
-
         }
 
     }

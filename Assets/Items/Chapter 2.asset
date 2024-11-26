@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
+  m_Name: Chapter 2
+  m_EditorClassIdentifier: 
+  visualItem: {fileID: 21300000, guid: 25ef4e3513fd7f4478fd01917ceefba4, type: 3}
+  nameItem: Book
+  isBook: 1
+  bookText:
+  - 'Good news. I moved out. Bad news. I''m back to sleeping outside. The appartment
+    was too much to deal with, so the cold outside currently suits my needs much
+    more. Thankfully, I learned about storage lockers and ended up putting all my
+    items in there for the meanwhile. I also learned that with money, you can get
+    anything in the world. '
+  - Though I am outside, I will be inside eventually, because I hired a bunch of
+    people to build me my own house, exactly how I wanted. The circus pays me "the
+    big bucks", as some people might say, for being the main attraction. I want to
+    know exactly why that's the case, but I won't worry too much. There are other
+    matters that are more important.
+  - The Puzzle Maker might be one of the greatest shows on TV, granted I haven't
+    watched much TV, but it is still one of the best. My plaything theory proves
+    everyday more and more to be true. I especially now see why people live to play.
+    The Puzzle Maker show has moved me and given me motivation to make my own puzzles.
+    Maybe I'll do one using a radio, a clock, maybe even cubes. No that last one
+    kind of seems stupid, I don't think I'll do that one.
+  - 
+  localPosition: {x: -1.131, y: -0.252, z: -0.015}
+  localRotation: {x: 84.19518, y: 81.446396, z: 266.17163}

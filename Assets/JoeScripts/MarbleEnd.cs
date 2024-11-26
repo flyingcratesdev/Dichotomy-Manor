@@ -5,7 +5,7 @@ using UnityEngine;
 public class MarbleEnd : MonoBehaviour
 {
     public GameObject answer;
-    public MarbleControl interactor;
+    public MazeInteractor interactor;
     // Start is called before the first frame update
     void Start()
     {

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
   m_Name: BluePuzzleCube
   m_EditorClassIdentifier: 
-  visualItem: {fileID: 21300000, guid: 1f3b43fd739751e42b8c294c3ccffe2a, type: 3}
-  nameItem: redpuzzlecube
+  visualItem: {fileID: 21300000, guid: da9bc34291a3182418b2e395d41e0c18, type: 3}
+  nameItem: bluepuzzlecube
   isBook: 0
   bookText: []
   localPosition: {x: 0, y: 0, z: 0}

@@ -5,22 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 51920e168d5401b4f8487a4f3f82d717
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Manor Playtest.unity
     guid: 47ab945509b0ec945be9de26f842d48e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IceRink.unity
     guid: 25317bfe6df3b5b4db8044ad9a16ab5a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bedroom.unity
     guid: a15c6d72f3790ab4fbf543587bd78380
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LivingRoom.unity
     guid: 8000baa07a543c245bbee0e79364fa6c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PaintingRoom.unity
     guid: c29ecb608bd75204581b84e910ccf6e7
+  - enabled: 1
+    path: Assets/Scenes/NewDemoRoom.unity
+    guid: 24c9cffb8d2e4e94e8e507a0bbf3c406
   m_configObjects: {}
