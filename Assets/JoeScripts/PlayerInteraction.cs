@@ -7,9 +7,11 @@ public class PlayerInteraction : MonoBehaviour
 
     public FPSController FPSController;
     public GameObject slidingPuzzle;
+    public GameObject reactionPuzzle;
     bool isTriggered = false;
     bool isSolvedSliding = false;
     bool isTriggeredPhaseTwo = false;
+    public bool isOnButton = false;
     public GameObject DirectionsText;
 
 
@@ -49,6 +51,27 @@ public class PlayerInteraction : MonoBehaviour
 
             DirectionsText.SetActive(false);
         }
+        if(isOnButton)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                reactionPuzzle.SetActive(true);
+                FPSController.enabled = false;
+
+            }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                reactionPuzzle.SetActive(false);
+                FPSController.enabled = true;
+
+
+            }
+
+        }
 
     }
     public void CompleteSlidingPuzzle()
@@ -79,7 +102,14 @@ public class PlayerInteraction : MonoBehaviour
             isTriggeredPhaseTwo = true;
 
         }
+        if (other.GetComponent<HatchButton>())
+        {
 
+
+            isOnButton = true;
+
+
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -99,6 +129,13 @@ public class PlayerInteraction : MonoBehaviour
 
 
             isTriggeredPhaseTwo = false;
+
+        }
+        if (other.GetComponent<HatchButton>())
+        {
+
+
+            isOnButton = false;
 
         }
     }
