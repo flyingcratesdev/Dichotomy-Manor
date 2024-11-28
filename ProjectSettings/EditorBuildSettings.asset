@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewDemoRoom.unity
     guid: 24c9cffb8d2e4e94e8e507a0bbf3c406
+  - enabled: 1
+    path: Assets/Scenes/Space.unity
+    guid: edc617e609c871749bcb3e0d3ddd159d
   m_configObjects: {}
