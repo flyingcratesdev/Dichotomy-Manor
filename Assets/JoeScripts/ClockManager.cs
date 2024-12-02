@@ -12,8 +12,9 @@ public class ClockManager : MonoBehaviour
     public TMP_Text clockText;
     void Start()
     {
+
         clockText.text = "" + smallHand + " + " + bigHand + " = ";
-        
+
 
     }
 

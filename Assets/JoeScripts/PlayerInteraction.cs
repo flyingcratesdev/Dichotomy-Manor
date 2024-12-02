@@ -11,7 +11,7 @@ public class PlayerInteraction : MonoBehaviour
     bool isTriggered = false;
     bool isSolvedSliding = false;
     bool isTriggeredPhaseTwo = false;
-    public bool isOnButton = false;
+    bool isOnButton = false;
     public GameObject DirectionsText;
 
 

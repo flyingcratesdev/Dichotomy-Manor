@@ -1,34 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class FootSteps : MonoBehaviour
 {
-    public AudioSource footsteps;
-    public AudioSource sprint;
+    public CharacterController player;
+    public AudioSource source;
+    public AudioClip footsteps;
+    public AudioClip sprint;
+    public float velocity;
+    public bool isWalking;
+    public bool isSprinting;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)
-            || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        velocity = player.velocity.sqrMagnitude;
+        if (!source.isPlaying)
         {
-            footsteps.enabled = true;
-            if(Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                footsteps.enabled = false;
-                sprint.enabled = true;
-            }
-            else
-            {
-                footsteps.enabled = true;
-                sprint.enabled = false;
-            }
+            source.Play();
         }
-        else
+        if (velocity > 45)
         {
-            footsteps.enabled = false;
-            sprint.enabled = false;
+            source.clip = sprint;
+            isSprinting = true;
+            isWalking = false;
+        }
+        else if (velocity > 0)
+        {
+            source.clip = footsteps;
+
+            isSprinting = false;
+            isWalking = true;
+
+        }
+        else if (velocity == 0)
+        {
+            source.Stop();
+            isSprinting = false;
+            isWalking = false;
+
         }
     }
 }
