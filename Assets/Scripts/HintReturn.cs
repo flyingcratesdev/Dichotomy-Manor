@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SpaceReturn : MonoBehaviour
+public class HintReturn : MonoBehaviour
 {
     public Button switchButton;
     public string ManorPlayRedo;

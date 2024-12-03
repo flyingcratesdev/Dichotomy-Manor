@@ -1,27 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine.UI;
+using TMPro;
 
-public class SpaceReturn : MonoBehaviour
+public class SymbolCombination : MonoBehaviour
 {
-    public Button switchButton;
-    public string ManorPlayRedo;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void OnButtonPress()
-    {
-        SceneManager.LoadScene(ManorPlayRedo);
+        
     }
 }

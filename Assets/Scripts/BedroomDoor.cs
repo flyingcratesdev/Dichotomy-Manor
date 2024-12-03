@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpaceSwitch : MonoBehaviour
+public class BedroomDoor : MonoBehaviour
 {
-    public string sceneLoad = "Space";
-    public float telescopeInteract = 1f;
+    public string sceneLoad = "SymbolCheck";
+    public float doorInteract = 1f;
     private bool isPlayerNear = false;
     private GameObject player;
     // Start is called before the first frame update
