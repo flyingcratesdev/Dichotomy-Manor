@@ -8,13 +8,14 @@ public class TurnOnTVScript : MonoBehaviour
 {
 
     public GameObject tvRemote;    
-    private Rigidbody remoteBody;
+    public Rigidbody remoteBody;
 
-    public VideoPlayer videoPlayer;
+    public VideoPlayer vp;
     // Start is called before the first frame update
     void Start()
     {
-        
+        vp = GetComponent<VideoPlayer>();
+        remoteBody = tvRemote.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,6 @@ public class TurnOnTVScript : MonoBehaviour
     
     void OnCollisionEnter(Collision Collision)
     {
-        videoPlayer.Play();
+        vp.Play();
     }
 }
