@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 441764731}
   - component: {fileID: 441764736}
   - component: {fileID: 441764735}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Remote Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1120,6 +1120,8 @@ GameObject:
   - component: {fileID: 657021971}
   - component: {fileID: 657021970}
   - component: {fileID: 657021969}
+  - component: {fileID: 657021973}
+  - component: {fileID: 657021972}
   m_Layer: 5
   m_Name: TV IMAGE
   m_TagString: Untagged
@@ -1217,6 +1219,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657021967}
   m_CullTransparentMesh: 1
+--- !u!65 &657021972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657021967}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 144.54141, y: 129.364, z: 317.79944}
+  m_Center: {x: -4.7840047, y: 1.9943913, z: -158.39975}
+--- !u!114 &657021973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657021967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1699206d00a7eda4382bbcbc6063464a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tvRemote: {fileID: 441764730}
+  videoPlayer: {fileID: 657021969}
 --- !u!1001 &677170564
 PrefabInstance:
   m_ObjectHideFlags: 0
