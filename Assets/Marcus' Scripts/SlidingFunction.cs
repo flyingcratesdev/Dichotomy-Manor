@@ -6,11 +6,13 @@ public class SlidingFunction : MonoBehaviour
     public float slideSpeed = 5f; // Speed of sliding
     private Vector3 slideDirection; // Direction of sliding
     private bool isSliding = false; // Whether the player is currently sliding
+    [SerializeField]
+    private bool isOnIce = false;
 
     void Update()
     {
         // Call the sliding function only if the player is not already sliding
-        if (!isSliding)
+        if (!isSliding && isOnIce)
         {
             HandleSliding();
         }
@@ -45,7 +47,7 @@ public class SlidingFunction : MonoBehaviour
     void FixedUpdate()
     {
         // Move the player in the chosen direction if sliding
-        if (isSliding)
+        if (isSliding && isOnIce)
         {
             controller.Move(slideDirection * slideSpeed * Time.deltaTime);
         }
@@ -58,6 +60,23 @@ public class SlidingFunction : MonoBehaviour
         {
             Debug.Log("Collided with obstacle or barrier or key. Stopping slide.");
             isSliding = false; // Allow new input after stopping
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Ice")) {
+        isOnIce = true;
+        
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Ice"))
+        {
+            isOnIce = false;
+
         }
     }
 }
