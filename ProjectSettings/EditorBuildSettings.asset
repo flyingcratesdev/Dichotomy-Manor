@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Manor Playtest.unity
     guid: 47ab945509b0ec945be9de26f842d48e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/IceRink.unity
     guid: 25317bfe6df3b5b4db8044ad9a16ab5a
   - enabled: 0
@@ -23,19 +23,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PaintingRoom.unity
     guid: c29ecb608bd75204581b84e910ccf6e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NewDemoRoom.unity
     guid: 24c9cffb8d2e4e94e8e507a0bbf3c406
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Space.unity
     guid: edc617e609c871749bcb3e0d3ddd159d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ManorPlayRedo.unity
     guid: bc8dcbefd0a9db845a248fece6cba829
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SymbolHint.unity
     guid: b5170a48a47142248834c49699448988
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SymbolCheck.unity
     guid: f5d9e525a1013bc499ae3fd30f0bcfe5
   m_configObjects: {}
