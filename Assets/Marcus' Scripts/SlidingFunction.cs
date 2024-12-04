@@ -56,7 +56,7 @@ public class SlidingFunction : MonoBehaviour
     // Stop sliding when colliding with objects tagged "Obstacle" or "Barrier"
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.collider.CompareTag("Obstacles") || hit.collider.CompareTag("Barrier") || hit.collider.CompareTag("Key")) 
+        if (hit.collider.CompareTag("Obstacles") || hit.collider.CompareTag("Barrier")) 
         {
             Debug.Log("Collided with obstacle or barrier or key. Stopping slide.");
             isSliding = false; // Allow new input after stopping
