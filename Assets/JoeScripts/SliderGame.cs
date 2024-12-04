@@ -22,10 +22,8 @@ public class SliderGame : MonoBehaviour
     public GameObject unsolved;
     public GameObject solved;
     public PlayerInteraction interactionScript;
-    void Start()
-    {
-        
-    }
+
+   
 
     void Update()
     {
@@ -51,7 +49,7 @@ public class SliderGame : MonoBehaviour
             unsolved.SetActive(false);
             solved.SetActive(true);
             interactionScript.CompleteSlidingPuzzle();
-            print("YOU WIN!");
+           
             hasWon = true;
 
         }

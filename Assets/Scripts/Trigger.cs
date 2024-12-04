@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public string keyName;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    public void CheckKey(string key)
+    {
+
+        if(keyName.Equals(key))
+        {
+
+            Destroy(this.gameObject);
+
+        }
+
+
     }
 }

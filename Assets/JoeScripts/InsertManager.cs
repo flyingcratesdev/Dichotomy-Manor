@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class InsertManager : MonoBehaviour
 {
-    bool isRed = false;
-    bool isBlue = false;
+    public bool isRed = false;
+    public bool isBlue = false;
 
     public GameObject uncompleted, completed;
-
-    public void SetBlock(bool isRed)
+    public SpawnKey roomDone;
+    public void SetBlock(bool isred)
     {
-        if(isRed)
+        if(isred)
         {
 
             isRed = true;
@@ -19,26 +20,23 @@ public class InsertManager : MonoBehaviour
 
         }else
         {
-
             isBlue = true;
+
+
         }
-
-
-
-    }
-
-
-
-
-    void Update()
-    {
-    if(isRed && isBlue)
+        if(isRed && isBlue)
         {
 
-            uncompleted.SetActive(false);
-            completed.SetActive(true); 
-
+            roomDone.SetKeyActive();
 
         }
+
+
+
     }
+    
+
+
+
+
 }

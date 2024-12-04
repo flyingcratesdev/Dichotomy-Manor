@@ -217,20 +217,15 @@ public class Inventory : MonoBehaviour
                         }
                     }
                 }
-                if (hit.collider.GetComponent<Trigger>())
+                if (hit.collider.GetComponent<Trigger>() && itemInHand)
                 {
 
-                    if (itemInHand.nameItem.Equals("key"))
-                    {
 
-                        print("OpenDoor");
+                    hit.collider.GetComponent<Trigger>().CheckKey(itemInHand.nameItem);
+                    DestroyItem();
 
-                    } else
-                    {
 
-                        print("Nothing happened");
 
-                    }
 
 
 
