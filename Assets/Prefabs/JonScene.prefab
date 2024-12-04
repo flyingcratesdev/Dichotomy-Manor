@@ -1662,7 +1662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 0
   gunMask:
     serializedVersion: 2
     m_Bits: 0
