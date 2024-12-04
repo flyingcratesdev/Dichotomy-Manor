@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Chapter 3
   m_EditorClassIdentifier: 
   visualItem: {fileID: 0}
-  nameItem: 
-  isBook: 0
-  bookText: []
+  nameItem: chapter3Book
+  isBook: 1
+  bookText:
+  - Sometimes it amazes me the different activities people come up with to have fun.
+    Put these shoes with razor blades on them and then walk on ice. This idea is
+    so weird, I just had to try it. As someone who thrives in ice, naturally this
+    activity came easy to me. I was gliding down the rink as if it were like home.
+  - Speaking of home, the manor is almost finished, and I can't wait to fill it with
+    all the knick nacks and goodies that I've been collecting. By the time I'm done
+    my research, I will have understood the world.
   localPosition: {x: 0, y: 0, z: 0}
   localRotation: {x: 0, y: 0, z: 0}

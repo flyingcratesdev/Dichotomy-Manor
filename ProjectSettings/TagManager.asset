@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - CinemachineTarget
-  - Ice
-  - LockedDoor
-  - Obstacles
-  - Barrier
-  - Key
-  - Door
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Item
-  - Trigger
-  - Ground
-  - NotItem
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

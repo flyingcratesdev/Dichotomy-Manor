@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
+  m_Name: Chapter 5
+  m_EditorClassIdentifier: 
+  visualItem: {fileID: 0}
+  nameItem: chapter3Book
+  isBook: 1
+  bookText:
+  - Now that I have an actual kitchen, I can myself some proper food. Unfortunately
+    when I go to the grocery store, all I find are weird objects that people end
+    up eating. Now that I'm here, I guess I'll just try combining a bunch of objects
+    until I find something that tastes good and like home.
+  - ' Fortunately I found some pretty good combinations. Meat and tomatoes, fish
+    and coffee, carrots and mushrooms. While not the greatest meals of all time,
+    my taste buds could get used to human food like this. Could I? No. Maybe. I don''t
+    know. '
+  localPosition: {x: 0, y: 0, z: 0}
+  localRotation: {x: 0, y: 0, z: 0}
