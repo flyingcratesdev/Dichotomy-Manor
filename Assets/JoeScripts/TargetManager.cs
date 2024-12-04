@@ -5,8 +5,9 @@ using UnityEngine;
 public class TargetManager : MonoBehaviour
 {
     public string orderStr = "";
-    public GameObject WinText;
     public float timer;
+    public SpawnKey roomDone;
+    bool isComplete = false;
     void Start()
     {
         
@@ -24,11 +25,11 @@ public class TargetManager : MonoBehaviour
             orderStr = "";
 
         }
-        if (orderStr == "1234")
+        if (orderStr == "1234" && !isComplete)
         {
-
+            roomDone.SetKeyActive();
             print("you win");
-            WinText.SetActive(true);
+            isComplete = true;
 
         }
 

@@ -19,6 +19,10 @@ public class MainMenu : MonoBehaviour
     }
     public void OnPlayButton()
     {
-        SceneManager.LoadScene("Manor Playtest");
+        SceneManager.LoadScene("ManorPlayRedo");
+    }
+    public void OnQuitButton()
+    {
+        Application.Quit();
     }
 }

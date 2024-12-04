@@ -9,6 +9,7 @@ public class InsertRed : MonoBehaviour
     public Material setColor;
     public void InsertBlock()
     {
+        print("RED");
         render.material = setColor;
         manager.SetBlock(true);
 
