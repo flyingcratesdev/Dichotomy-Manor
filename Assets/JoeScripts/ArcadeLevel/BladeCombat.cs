@@ -14,7 +14,15 @@ public class BladeCombat : MonoBehaviour
     private CharacterController characterController;
     private Vector3 knockbackVelocity; // Stores the current knockback velocity
     private float knockbackTime = 0f; // Timer for knockback duration
+    public bool isBlocking = false;
+    public int maxHealth = 3;
+    public int health;
+    public Transform lastCheckPoint;
 
+    private void Start()
+    {
+        health = maxHealth;
+    }
 
     private IEnumerator PlayAndWaitForAnimation(string stateName)
     {
@@ -23,6 +31,11 @@ public class BladeCombat : MonoBehaviour
         {
             Debug.LogError("Animator is not assigned!");
             yield break;
+        }
+        if(stateName == "SwordBlock")
+        {
+            isBlocking = true;
+
         }
 
         // Trigger the animation
@@ -40,8 +53,14 @@ public class BladeCombat : MonoBehaviour
         // Wait for the animation to finish
         float animationLength = stateInfo.length;
         yield return new WaitForSeconds(animationLength);
+        if (stateName == "SwordBlock")
+        {
+            isBlocking = false;
+
+        }
         inAction = false;
             
+
         Debug.Log($"Animation '{stateName}' completed.");
     }
     private IEnumerator AttackHit()
@@ -111,13 +130,31 @@ public class BladeCombat : MonoBehaviour
         // Reset the knockback timer
         knockbackTime = knockbackDuration;
     }
+    void TakeDamage()
+    {
+        health--;
+        if(health <= 0)
+        {
+            characterController.enabled = false;
+            transform.position = lastCheckPoint.position;
+            characterController.enabled = true;
 
+            health = maxHealth;
+        }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<GuardHitBox>()) {
+        if (other.GetComponent<GuardHitBox>() && !isBlocking) {
         ApplyKnockback(other.transform.position);
-        
+            TakeDamage();
+        }
+        if(other.GetComponent<GuardHitBox>() && isBlocking)
+        {
+
+            StartCoroutine(AttackHit());
+
         }
     }
 }
