@@ -4,6 +4,7 @@ public class DestroyOnCollision : MonoBehaviour
 {
     public GameObject door;
     public Transform key;
+    public SpawnKey roomDone;
 
     // Trigger detection for player collision
     private void OnTriggerEnter(Collider other)
@@ -18,7 +19,7 @@ public class DestroyOnCollision : MonoBehaviour
                 Debug.Log("Door destroyed.");
             }
 
-
+            roomDone.SetKeyActive();
             Destroy(this.gameObject);
         }
     }

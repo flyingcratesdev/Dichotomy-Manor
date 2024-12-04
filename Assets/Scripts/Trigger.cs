@@ -6,6 +6,8 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
     public string keyName;
+    public AudioSource music;
+    public AudioClip musicClip;
     void Start()
     {
         
@@ -20,7 +22,9 @@ public class Trigger : MonoBehaviour
         print(key);
         if(keyName.Equals(key))
         {
-
+            music.Stop();
+            music.clip = musicClip; 
+            music.Play();
             Destroy(this.gameObject);
 
         }
