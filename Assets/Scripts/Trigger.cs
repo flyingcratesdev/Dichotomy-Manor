@@ -22,7 +22,7 @@ public class Trigger : MonoBehaviour
         print(key);
         if(keyName.Equals(key))
         {
-            music.Stop();
+            
             music.clip = musicClip; 
             music.Play();
             Destroy(this.gameObject);
