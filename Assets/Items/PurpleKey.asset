@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb5693d211b458479636c6b30c93b3e, type: 3}
   m_Name: PurpleKey
   m_EditorClassIdentifier: 
-  visualItem: {fileID: 0}
+  visualItem: {fileID: 21300000, guid: bb0b197c781af6e448e0696f02fe6ae7, type: 3}
   nameItem: purpleKey
   isBook: 0
   bookText: []
