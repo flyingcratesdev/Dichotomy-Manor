@@ -17,7 +17,7 @@ public class Trigger : MonoBehaviour
     }
     public void CheckKey(string key)
     {
-
+        print(key);
         if(keyName.Equals(key))
         {
 
