@@ -26,6 +26,10 @@ public class TurnOnTVScript : MonoBehaviour
     
     void OnCollisionEnter(Collision Collision)
     {
+        if(Collision.gameObject.name == "Remote Control")
+        {
         vp.Play();
+
+        }
     }
 }
