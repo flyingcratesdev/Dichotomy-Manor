@@ -6,6 +6,13 @@ TagManager:
   tags:
   - CinemachineTarget
   - Ice
+<<<<<<< Updated upstream
+  - LockedDoor
+=======
+  - Obstacles
+  - Ground
+  - Barrier
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

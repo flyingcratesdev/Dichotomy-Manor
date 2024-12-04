@@ -13,7 +13,6 @@ public class SpaceSwitch : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-
     }
 
     // Update is called once per frame
@@ -22,6 +21,8 @@ public class SpaceSwitch : MonoBehaviour
         if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene(sceneLoad);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
