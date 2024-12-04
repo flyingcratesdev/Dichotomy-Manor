@@ -29,7 +29,7 @@ public class MazeInteractor : MonoBehaviour
         }
 
 
-        if (isInteracted && isOnMaze && Input.GetKeyDown(KeyCode.Escape))
+        if (isInteracted && isOnMaze && Input.GetKeyDown(KeyCode.Tab))
         {
             playerScript.enabled = true;
 

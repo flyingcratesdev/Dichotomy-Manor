@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SpaceReturn : MonoBehaviour
 {
+    public Button switchButton;
+    public string ManorPlayRedo;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,8 @@ public class SpaceReturn : MonoBehaviour
 
     }
 
-    //public void spaceExit(string Observatory)
-    //{
-        //SceneManager.LoadScene(Observatory);
-    //}
+    public void OnButtonPress()
+    {
+        SceneManager.LoadScene(ManorPlayRedo);
+    }
 }
