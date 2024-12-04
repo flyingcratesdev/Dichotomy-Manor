@@ -8,7 +8,9 @@ public class PlayerInteraction : MonoBehaviour
     public FPSController FPSController;
     public GameObject slidingPuzzle;
     public GameObject reactionPuzzle;
+    public GameObject spacePuzzle; //Space stuff
     bool isTriggered = false;
+    bool isSpaceTriggered = false; //Space stuff
     bool isSolvedSliding = false;
     bool isTriggeredPhaseTwo = false;
     bool isOnButton = false;
@@ -41,17 +43,18 @@ public class PlayerInteraction : MonoBehaviour
 
             }
         }
-        if(isTriggeredPhaseTwo)
+        if (isTriggeredPhaseTwo)
         {
 
             DirectionsText.SetActive(true);
 
-        }else
+        }
+        else
         {
 
             DirectionsText.SetActive(false);
         }
-        if(isOnButton)
+        if (isOnButton)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -73,6 +76,21 @@ public class PlayerInteraction : MonoBehaviour
 
         }
 
+        if (isSpaceTriggered && Input.GetKeyDown(KeyCode.E)) //Space stuff
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            spacePuzzle.SetActive(true);
+            FPSController.enabled = false;
+        }
+        if (isSpaceTriggered && Input.GetKeyDown(KeyCode.Tab))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            spacePuzzle.SetActive(false);
+            FPSController.enabled = true;
+        }
+
     }
     public void CompleteSlidingPuzzle()
     {
@@ -85,9 +103,18 @@ public class PlayerInteraction : MonoBehaviour
 
     }
 
+    public void CompleteSpacePuzzle() //Space stuff
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        spacePuzzle.SetActive(false);
+        FPSController.enabled = true;
+        isSolvedSliding = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<SlidingPuzzleTrigger>())
+        if (other.GetComponent<SlidingPuzzleTrigger>())
         {
 
 
@@ -109,6 +136,11 @@ public class PlayerInteraction : MonoBehaviour
             isOnButton = true;
 
 
+        }
+
+        if (other.GetComponent<SpacePuzzleTrigger>()) //Space stuff
+        {
+            isSpaceTriggered = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -137,6 +169,11 @@ public class PlayerInteraction : MonoBehaviour
 
             isOnButton = false;
 
+        }
+
+        if (other.GetComponent<SpacePuzzleTrigger>()) //Space stuff
+        {
+            isSpaceTriggered = false;
         }
     }
 }
